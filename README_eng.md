@@ -39,9 +39,9 @@ As we only need the content of introduction we removed the lines containing '안
 cd utils
 python sample_maker.py
 ```
-스크립트를 실행하면 sample1.txt부터 sample50.txt까지 담은 폴더를 생성한다. 샘플 파일은 다음과 보인다.<br /><br />
+Script generates a folder which contains files from samples1.txt to samples50.txt and looks like in the image below.<br /><br />
 <img src="./img/sample_file.png"></img><br />
-마지막으로 마스킹 테스팅하기 위해서 "test.py" 스크립트를 실행한다.<br /><br />
+Finally, for mask the samples you have to run <b>test.py</b><br /><br />.
 ```
 python test.py
 ```
