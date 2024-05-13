@@ -1,5 +1,6 @@
 # 🪪개인 정보 마스커
 <a href="./README_eng.md"><img src="./img/flags/us.png" height="20px"></img> READ ENGLISH VERSION</a>
+개인 정보를 보호하기 위해서 정규 표현식을 이용하고 사람들의 개인 정보를 숨기는 프로그램이다.
 ## ⬇️ 리포지토리 내려받기
 ```
 git clone https://github.com/youngdo1990/personal_info_masker.git
