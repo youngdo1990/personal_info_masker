@@ -1,5 +1,5 @@
 # 👮Personal Info Masker
-<a href="./README.md"><img src="./img/flags/kr.png" height="20px"></img> 한국어 버전 보기</a>
+<a href="./README.md"><img src="./img/flags/kr.png" height="20px"></img> 한국어 버전 보기</a><br /><br />
 This is a program which uses regular expressions to mask and protect people's personal information.
 ## ⬇️ Download Repository
 ```
