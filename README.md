@@ -45,4 +45,4 @@ python sample_maker.py
 python test.py
 ```
 "test.py" 스크립트는 샘플 파일 텍스트 적재하고 마스크를 한 다음에 <b>./utils/output</b> 폴더에 마스크된 텍스트를 저장한다. 마스크 된 파일 예시는 <b>./utils/outputs/sample47.txt</b>이고, 다음과 보인다.<br /><br />
-<img src=src="./img/output_file.png"><br />
+<img src="./img/output_file.png"><br />
