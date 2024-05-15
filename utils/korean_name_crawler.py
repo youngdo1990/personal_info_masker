@@ -24,8 +24,6 @@ def get_driver(headless=True):
 
 
 def mine_korean_names():
-    # https://www.name-ranking.com/ranking#from=2008&to=2024&p=577
-    
     driver = get_driver()
     driver.get('https://www.name-ranking.com/ranking#from=2008&to=2024&p=577')
     # 지연 시간을 지정한다.

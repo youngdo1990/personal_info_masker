@@ -10,21 +10,20 @@ LAST_NAMES_FILE = "korean_last_names.txt"
 def generate_korname_regex():
     # 성 섭 정규 펴햔식 생성
     # Generate sub regular expression for last names
-    last_names_substring = "("
-    with open(LAST_NAMES_FILE, "r", encoding="utf-8", errors="ignore") as file:
-        for last_name in file:
-            last_names_substring += last_name.strip() + "|"
-        last_names_substring = last_names_substring[:-1]
-    last_names_substring += ")"
-    # 이름 섭 정규 펴햔식 생성
-    # Generate sub regular expression for names
-    names_substring = "("
-    with open(NAMES_FILE, "r", encoding="utf-8", errors="ignore") as file:
-        for name in file:
-            names_substring += name.strip() + "|"
-        names_substring = names_substring[:-1]
-    names_substring += ")"
-    korname_regex = "r\'\\b" + last_names_substring + names_substring + "\\b\'"
+    korname_regex = "r\'\\b("
+    last_names = open(LAST_NAMES_FILE, "r", encoding="utf-8", errors="ignore")
+    names = open(NAMES_FILE, "r", encoding="utf-8", errors="ignore")
+    names_list = []
+    for name in names:
+        names_list.append(name.strip())
+    for last_name in last_names:
+        for name in names_list:
+            korname_regex += last_name.strip() + name + "|"
+    # 마지막 '|' 지우기
+    # Eliminate last '|'
+    korname_regex = korname_regex[:-1] + ")\\b\'"
+    last_names.close()
+    names.close()
     with open("korname_regex.txt", "w", encoding="utf-8", errors="ignore") as file:
         file.write(korname_regex)
     return
