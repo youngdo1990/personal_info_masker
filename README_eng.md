@@ -41,9 +41,9 @@ python sample_maker.py
 ```
 Script generates a folder which contains files from samples1.txt to samples50.txt and looks like in the image below.<br /><br />
 <img src="./img/sample_file.png"></img><br />
-Finally, for mask the samples you have to run <b>test.py</b><br /><br />.
+Finally, for mask the samples you have to run <b>test.py</b>.<br /><br />
 ```
 python test.py
 ```
-"test.py" 스크립트는 샘플 파일 텍스트 적재하고 마스크를 한 다음에 <b>./utils/output</b> 폴더에 마스크된 텍스트를 저장한다. 마스크 된 파일 예시는 <b>./utils/outputs/sample47.txt</b>이고, 다음과 보인다.<br /><br />
+The script <b>"test.py"</b> loads the sample files and after masking personal information save the masked files in <b>./utils/output</b>. One example of masked output. File name is <b>./utils/outputs/sample47.txt</b> and it looks like in the image.<br /><br />
 <img src="./img/output_file.png"><br />
