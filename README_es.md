@@ -43,9 +43,9 @@ python sample_maker.py
 ```
 Al correr el script se generan los archivos desde sample1.txt hasta sample50.txt. La imagen a continuación es un ejemplo de un archivo de ejemplo.<br /><br />
 <img src="./img/sample_file.png"></img><br />
-마지막으로 마스킹 테스팅하기 위해서 "test.py" 스크립트를 실행한다.<br /><br />
+Finalmente para probar el enmascarador se debe correr el script "test.py".<br /><br />
 ```
 python test.py
 ```
-"test.py" 스크립트는 샘플 파일 텍스트 적재하고 마스크를 한 다음에 <b>./utils/output</b> 폴더에 마스크된 텍스트를 저장한다. 마스크 된 파일 예시는 <b>./utils/outputs/sample47.txt</b>이고, 다음과 보인다.<br /><br />
+El script "test.py" carga los ejemplos y después de enmascarar la información personal, los guarda en la carpeta <b>./utils/output</b>. Un ejemplo de un archivo con texto enmascarado es el archivo <b>./utils/outputs/sample47.txt</b> y se ve como se muestra en la imagen a continuación.
 <img src="./img/output_file.png"><br />
