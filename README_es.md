@@ -61,21 +61,21 @@ python personal_info_masker.py --text=<원하는 텍스트>
 ```
 python personal_info_masker.py --text="제 이름은 채환희이고, 제 전화번호는 010-123-5678 입니다."
 ```
-예시 출력은 다음과 같다.<br /><br />
+La salida del programa se ve como en la imagen a continuación.<br /><br />
 <img src="./img/console_text_sample.png"><br />
 ### 📝 Archivo
-파일 하나만 마스크하고 싶으면 <b>personal_info_masker.py</b> 스크립트를 실행하고 --file 파라미터로 원하는 파일 경로을 전달하면 된다.<br />
-❗<b>스크림을 실행하기 전에 가상 환경을 활성화해야 한다.</b>
+Si quiere enmascarar la informacion de un solo archivo ejecute el script <b>personal_info_masker.py</b> y con el parametro --file escoja la ruta del archivo deseado.<br />
+❗<b>Antes de ejecutar el script se debe activar el entorno virtual.</b>
 ```
 python personal_info_masker.py --text=<원하는 파일 경로> --output_folder=<원하는 폴더 경로>
 ```
---output_folder 파라미터 지정하면 폴더 만들어 주고 거기서 마스크된 텍스트 파일을 저장한다. 파일 이름 양식은 <b>'datetime'_output.txt</b>이다. 지정 안하면 출력은 명령 프롶트에 나온다.<br />
-<b>예시 1 (콘솔 출력):</b>
+Si utiliza el parámetro --output_folder, el programa creará la carpeta deseada y guardará el archivo enmascarado. El formato del archivo resultante es <b>'datetime'_output.txt</b>. Si no indica una carpeta de salida, el texto enmascarado se mostrará en la consola.<br />
+<b>Ejeplo 1(Salida en Consola):</b>
 ```
 python personal_info_masker.py --file="console_test\console_test1.txt"
 ```
 <img src="./img/single_file_test1.png"><br />
-<b>예시 2 (파일 출력):</b>
+<b>Ejemplo 2 (Salida en Archivo):</b>
 <img src="./img/single_file_test2.png"><br />
 ```
 python personal_info_masker.py --file="console_test\console_test1.txt" --output_folder="output_sample"
