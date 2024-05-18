@@ -1,7 +1,7 @@
 # 🪪개인 정보 마스커
 <a href="./README_eng.md"><img src="./img/flags/us.png" height="20px"></img> READ ENGLISH VERSION</a>
 &nbsp;
-<a href="./README_eng.md"><img src="./img/flags/es.png" height="20px"></img> Ver Versión en Español</a><br /><br />
+<a href="./README_es.md"><img src="./img/flags/es.png" height="20px"></img> Ver Versión en Español</a><br /><br />
 사람들의 개인 정보를 보호하기 위해서 정규 표현을 이용하는 프로그램이다.
 ## ⬇️ 다운로드 리포지토리
 ```
