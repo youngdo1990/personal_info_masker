@@ -4,7 +4,10 @@
 ####################################################################################################
 import re
 import os
+import sys
 import argparse
+from datetime import datetime
+from tqdm import tqdm
 
 
 # 한국어 교착어이어서 개인 정보는 이다 동사와 붙여 있을 수도 있다.
@@ -91,13 +94,67 @@ def personal_info_masker(text):
     return text
 
 
+def mask_text(text):
+    new_text = personal_info_masker(text)
+    return new_text
+
+
+def mask_single_file(file):
+    if not os.path.exists(file):
+        print("지정된 파일이 존재하지 않습니다.")
+        sys.exit()
+    with open(file, "r", encoding="utf-8", errors="ignore") as f:
+        text = f.read()
+    new_text = mask_text(text)
+    return new_text
+
+
+
+def mask_multiple_files(folder, output_folder=None):
+    if not os.path.exists(folder):
+        print("지정된 폴더가 존재하지 않습니다.")
+        sys.exit()
+    files = os.listdir(folder)
+    files = [f for f in files if f.endswith(".txt")]
+    if output_folder is None:
+        output_folder = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    for file in files:
+        new_text = mask_single_file(os.path.join(folder, file))
+        output_file = os.path.join(output_folder, file)
+        with open(output_file, "w", encoding="utf-8", errors="ignore") as f:
+            f.write(new_text)
+    return
+
+
 def main():
-    text = '''제 이름은 김민지입니다. 저는 서울에서 살고 있는 27살 여성이에요. 이메일 주소는 minji.kim_1995@outlook.com 이고, 주소는 서울특별시 강남구 역삼동 789번지이며 전화번호는 010-1234-5678입니다. 대학에서 경영학을 전공하고 현재는 마케팅 분야에서 일하고 있어요. 취미는 여행과 요리입니다. 새로운 친구들을 만나서 함께 좋은 시간을 보내고 싶어요. 만나서 반가워요!'''
-    new_text = personal_info_masker(text, False)
-    print("ORIGINAL_TEXT")
-    print(text)
-    print("MASKED TEXT")
-    print(new_text)
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('--text', help='마스크를 하고 싶은 텍스트')
+    group.add_argument('--file', help='마스크를 하고 싶은 텍스트 파일')
+    group.add_argument('--folder', help='마스킹하고 싶은 텍스트 파일이 담긴 폴더')
+    parser.add_argument('--output_folder', help='마스킹된 텍스트 파일이 담긴 폴더')
+    args = parser.parse_args()
+    if args.text is None and args.file is None and args.folder is None:
+        print("--text나 --file나 --folder 파라미터를 지정하면 됩니다.")
+    if args.text is not None:
+        new_text = mask_text(args.text)
+        print(new_text)
+    elif args.file is not None:
+        new_text = mask_single_file(args.file)
+        if args.output_folder is not None:
+            if not os.path.exists(args.output_folder):
+                os.makedirs(args.output_folder)
+            print(args.output_folder)
+            file_name = datetime.now().strftime('%Y_%m_%d_%H_%M_%S') + "_output.txt"
+            output_file_name = os.path.join(args.output_folder, file_name)
+            with open(output_file_name, "w", encoding="utf-8", errors="ignore") as file:
+                file.write(new_text)
+        else:
+            print(new_text)
+    else:
+        mask_multiple_files(args.folder, args.output_folder)
     return
 
 
