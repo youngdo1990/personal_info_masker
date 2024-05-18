@@ -70,7 +70,7 @@ Si quiere enmascarar la informacion de un solo archivo ejecute el script <b>pers
 python personal_info_masker.py --text=<원하는 파일 경로> --output_folder=<원하는 폴더 경로>
 ```
 Si utiliza el parámetro --output_folder, el programa creará la carpeta deseada y guardará el archivo enmascarado. El formato del archivo resultante es <b>'datetime'_output.txt</b>. Si no indica una carpeta de salida, el texto enmascarado se mostrará en la consola.<br />
-<b>Ejeplo 1(Salida en Consola):</b>
+<b>Ejemplo 1 (Salida en Consola):</b>
 ```
 python personal_info_masker.py --file="console_test\console_test1.txt"
 ```
