@@ -49,3 +49,35 @@ python test.py
 ```
 El script "test.py" carga los ejemplos y después de enmascarar la información personal, los guarda en la carpeta <b>./utils/output</b>. Un ejemplo de un archivo con texto enmascarado es el archivo <b>./utils/outputs/sample47.txt</b> y se ve como se muestra en la imagen a continuación.
 <img src="./img/output_file.png"><br />
+## ▶️ Ejecutar en Ventana de Comandos
+### 🔡 Texto
+Si quiere enmascarar la información personal de un texto, ejecute el script <b>personal_info_masker.py</b> e introduzca el texto deseado usando el parámetro --text.<br />
+❗<b>Antes de ejecutar el script se debe activar el entorno virtual.</b>
+
+```
+python personal_info_masker.py --text=<원하는 텍스트>
+```
+<b>예시:</b>
+```
+python personal_info_masker.py --text="제 이름은 채환희이고, 제 전화번호는 010-123-5678 입니다."
+```
+예시 출력은 다음과 같다.<br /><br />
+<img src="./img/console_text_sample.png"><br />
+### 📝 Archivo
+파일 하나만 마스크하고 싶으면 <b>personal_info_masker.py</b> 스크립트를 실행하고 --file 파라미터로 원하는 파일 경로을 전달하면 된다.<br />
+❗<b>스크림을 실행하기 전에 가상 환경을 활성화해야 한다.</b>
+```
+python personal_info_masker.py --text=<원하는 파일 경로> --output_folder=<원하는 폴더 경로>
+```
+--output_folder 파라미터 지정하면 폴더 만들어 주고 거기서 마스크된 텍스트 파일을 저장한다. 파일 이름 양식은 <b>'datetime'_output.txt</b>이다. 지정 안하면 출력은 명령 프롶트에 나온다.<br />
+<b>예시 1 (콘솔 출력):</b>
+```
+python personal_info_masker.py --file="console_test\console_test1.txt"
+```
+<img src="./img/single_file_test1.png"><br />
+<b>예시 2 (파일 출력):</b>
+<img src="./img/single_file_test2.png"><br />
+```
+python personal_info_masker.py --file="console_test\console_test1.txt" --output_folder="output_sample"
+```
+### 📁 Carpeta
