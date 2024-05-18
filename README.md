@@ -77,4 +77,7 @@ python personal_info_masker.py --file="console_test\console_test1.txt"
 <img src="./img/single_file_test1.png"><br />
 <b>예시 2:</b>
 <img src="./img/single_file_test2.png"><br />
+```
+python personal_info_masker.py --file="console_test\console_test1.txt" --output_folder="output_sample"
+```
 ### 📁 폴더
