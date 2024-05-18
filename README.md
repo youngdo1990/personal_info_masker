@@ -1,6 +1,6 @@
 # 🪪개인 정보 마스커
-<a href="./README_eng.md"><img src="./img/flags/us.png" height="20px"></img> READ ENGLISH VERSION</a><br /><br />
-<a href="./README_eng.md"><img src="./img/flags/ko.png" height="20px"></img> 한국어 버전 보</a><br /><br />
+<a href="./README_eng.md"><img src="./img/flags/us.png" height="20px"></img> READ ENGLISH VERSION</a>
+<a href="./README_eng.md"><img src="./img/flags/kr.png" height="20px"></img> 한국어 버전 보</a><br /><br />
 개인 정보를 보호하기 위해서 정규 표현식을 이용하고 사람들의 개인 정보를 숨기는 프로그램이다.
 ## ⬇️ 리포지토리 내려받기
 ```
