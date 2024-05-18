@@ -27,21 +27,21 @@ cd utils
 python korean_name_crawler.py
 ```
 ### 🔣 Generación de una Expresión Regular para Nombres Coreanos
-한국 성씨와 이름 리스트를 만든 후 파이썬 정규 표현식을 생성해야 한다. 한국 이름 정규 표현삭울 먼둘가 위해서 크롤링된 한국 성 씨와 이름을 조합하고 정규 표현식으로 바꿔야 했다. 추출한 한국 이름 정규 표현식을 만들기 위해서 <b>korean_name_regex_generator.py</b> 스크립트를 실행하면 된다.
+Después de crear una lista de apellidos y nombres coreanos, se debe generar una expresión regular en Python. Para la generación de la expresión regular de nombres coreanos, fue necesario combinar y convertir los apellidos y nombres coreanos obtenidos mediante web scraping en una expresión regular. Para crear la expresión regular de nombres coreanos extraídos, simplemente ejecuta el script korean_name_regex_generator.py.
 ```
 python korean_name_regex_generator.py
 ```
-스크립트를 실행하면 <b>korname_regex.txt</b> 파일 생성한다. <b>personal_info_masker.py</b> 스크립은 <b>korname_regex.txt</b> 파일을 적재하고 한국 이름을 추출할 수 있는 정규 표현식으로 이용한다. <b>korname_regex.txt</b> 파일은 다음과 보인다.<br /><br />
+Al ejecutar el script se creará el archivo <b>korname_regex.txt</b>. El script <b>personal_info_masker.py</b> utilizará el archivo <b>korname_regex.txt</b> como una expresión regular para encontrar los nombres coreanos.<br /><br />
 <img src="./img/korname_regex_file.png"></img><br />
-## ⚗️ 테스팅
-개인 정보 마스커를 테스팅하기 위해서 ChatGPT로 가짜 정보를 이용하는 자기소개 50개를 생성했다. OpenAI API Key 없어서 ChatGPT가 생성한 자기소개를 복사하고 텍스트 파일에 저장했다. 파일 이름은 <b>chatgpt_generated_introduction.txt</b>이며 다음과 보인다.<br /><br />
+## ⚗️ Testing
+Para probar el enmascarador de información personal, generé con ChatGPT 50 ejemplos de presentaciones personales en coreano. Como no tengo la API Key de OpenAI, simplemente pedí a ChatGPT que generara los 50 ejemplos con información personal falsa. Luego, copié y guardé los ejemplos en el archivo <b>chatgpt_generated_introduction.txt</b>, que se ve como se muestra en la imagen a continuación.<br /><br />
 <img src="./img/chatgpt_samples.png"></img><br />
-자기소개 내용만 필요해서 '안녕하세요!', 사인과 '감사합니다'를 담고 있는 라인을 제거하고 샘플 파일을 생성하기 위해서 <b>./utils/sample_maker.py</b> 스크립트를 실행한다.<br />
+Como solo se necesita el contenido de la presentacion personal, se eliminan los token innecesarios como '안녕하세요!', '감사합니다' y la firma. Para realizar este proceso se debe correr el script <b>./utils/sample_maker.py</b>.<br />
 ```
 cd utils
 python sample_maker.py
 ```
-스크립트를 실행하면 sample1.txt부터 sample50.txt까지 담은 폴더를 생성한다. 샘플 파일은 다음과 보인다.<br /><br />
+Al correr el script se generan los archivos desde sample1.txt hasta sample50.txt. La imagen a continuación es un ejemplo de un archivo de ejemplo.<br /><br />
 <img src="./img/sample_file.png"></img><br />
 마지막으로 마스킹 테스팅하기 위해서 "test.py" 스크립트를 실행한다.<br /><br />
 ```
