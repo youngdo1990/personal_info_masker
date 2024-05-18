@@ -1,4 +1,4 @@
-# 🪪개인 정보 마스커
+# 🪪 Enmascarador de Información Personal
 <a href="./README_eng.md"><img src="./img/flags/us.png" height="20px"></img> READ ENGLISH VERSION</a>
 &nbsp;
 <a href="./README_eng.md"><img src="./img/flags/kr.png" height="20px"></img> 한국어 버전 보기</a><br /><br />
