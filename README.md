@@ -69,13 +69,13 @@ python personal_info_masker.py --text="제 이름은 채환희이고, 제 전화
 ```
 python personal_info_masker.py --text=<원하는 파일 경로> --output_folder=<원하는 폴더 경로>
 ```
---output_folder 파라미터 지정하면 폴더 만들어 주고 거기서 마스크된 텍스트 파일을 저장한다. 파일 이름 양식은 <b><datetime>_output.txt</b>이다. 지정 안하면 출력은 명령 프롶트에 나온다.
-<b>예시 1:</b>
+--output_folder 파라미터 지정하면 폴더 만들어 주고 거기서 마스크된 텍스트 파일을 저장한다. 파일 이름 양식은 <b><datetime>_output.txt</b>이다. 지정 안하면 출력은 명령 프롶트에 나온다.<br />
+<b>예시 1 (콘솔 출력):</b>
 ```
 python personal_info_masker.py --file="console_test\console_test1.txt"
 ```
 <img src="./img/single_file_test1.png"><br />
-<b>예시 2:</b>
+<b>예시 2 (파일 출력):</b>
 <img src="./img/single_file_test2.png"><br />
 ```
 python personal_info_masker.py --file="console_test\console_test1.txt" --output_folder="output_sample"
