@@ -1,4 +1,7 @@
 # 👮Personal Info Masker
+<img alt="Html" src ="https://img.shields.io/badge/python-v3.11.4-blue"></img>
+<img alt="Html" src ="https://img.shields.io/badge/Windows11-Pass-brightgreen"></img>
+<img alt="Html" src ="https://img.shields.io/badge/Ubuntu20.04-Pass-brightgreen"></img><br /><br />
 <a href="./README.md"><img src="./img/flags/kr.png" height="20px"></img> 한국어 버전 보기</a>&nbsp;
 <a href="./README_es.md"><img src="./img/flags/es.png" height="20px"></img> Ver Versión en Español</a>
 <br /><br />
