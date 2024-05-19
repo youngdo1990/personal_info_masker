@@ -57,7 +57,7 @@ Si quiere enmascarar la información personal de un texto, ejecute el script <b>
 ```
 python personal_info_masker.py --text=<원하는 텍스트>
 ```
-<b>예시:</b>
+<b>Ejemplo:</b>
 ```
 python personal_info_masker.py --text="제 이름은 채환희이고, 제 전화번호는 010-123-5678 입니다."
 ```
@@ -86,5 +86,5 @@ Si desea enmascarar el texto de varios archivos, ejecute el script <b>personal_i
 ```
 python personal_info_masker.py --file="console_test" --output_folder="output_samples"
 ```
-출력은 다음과 같다.
+La salida del programa se ve como en la imagen a continuación.
 <img src="./img/folder_sample.png"><br />
