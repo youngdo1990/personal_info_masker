@@ -88,3 +88,5 @@ python personal_info_masker.py --file="console_test" --output_folder="output_sam
 ```
 La salida del programa se ve como en la imagen a continuación.
 <img src="./img/folder_sample.png"><br />
+# 🛠 Autor
+Alvaro Peralta (Hwan-hee Chae)👑<br>
