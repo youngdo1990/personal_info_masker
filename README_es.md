@@ -81,3 +81,10 @@ python personal_info_masker.py --file="console_test\console_test1.txt"
 python personal_info_masker.py --file="console_test\console_test1.txt" --output_folder="output_sample"
 ```
 ### 📁 Carpeta
+Si desea enmascarar el texto de varios archivos, ejecute el script <b>personal_info_masker.py</b> y use el parámetro --folder para seleccionar la carpeta que contiene los archivos que desea enmascarar. Si define el parámetro --output_folder, el programa creará la carpeta especificada. De lo contrario, el nombre de la carpeta de salida será la fecha y hora actuales (datetime).<br />
+❗<b>Antes de ejecutar el script se debe activar el entorno virtual.</b>
+```
+python personal_info_masker.py --file="console_test" --output_folder="output_samples"
+```
+출력은 다음과 같다.
+<img src="./img/folder_sample.png"><br />
