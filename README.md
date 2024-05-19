@@ -88,5 +88,5 @@ python personal_info_masker.py --file="console_test" --output_folder="output_sam
 ```
 출력은 다음과 같다.
 <img src="./img/folder_sample.png"><br />
-# 🛠제작자
+# 🛠 제작자
 알바로(채환희)👑<br>
