@@ -81,3 +81,10 @@ python personal_info_masker.py --file="console_test\console_test1.txt"
 python personal_info_masker.py --file="console_test\console_test1.txt" --output_folder="output_sample"
 ```
 ### 📁 폴더
+여러 파일 텍스트를 마스크하고 싶으면 <b>personal_info_masker.py</b> 스크립트를 실행하고 --folder 파라미터로 원하는 파일들이 담긴 폴더 경로를 전달하면 된다. --output_folder 파라미터를 지절하면 프로그램은 원하는 출력 폴더 만들어 준다. 지정하지 않은 겅우에 출력 폴더 이름은 datetime이 될 것이다.<br />
+❗<b>스크림을 실행하기 전에 가상 환경을 활성화해야 한다.</b>
+```
+python personal_info_masker.py --file="console_test" --output_folder="output_samples"
+```
+출력은 다음과 같다.
+<img src="./img/folder_sample.png"><br />
