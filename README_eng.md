@@ -49,3 +49,42 @@ python test.py
 ```
 The script <b>"test.py"</b> loads the sample files and after masking personal information save the masked files in <b>./utils/output</b>. One example of masked output. File name is <b>./utils/outputs/sample47.txt</b> and it looks like in the image.<br /><br />
 <img src="./img/output_file.png"><br />
+## ▶️ Ejecutar en Ventana de Comandos
+### 🔡 Text
+If you want to mask the personal information in one given text, run <b>personal_info_masker.py</b> script and input the text using --text parameter.<br />
+❗<b>Before run the script you have to activate the virtual environment.</b>
+
+```
+python personal_info_masker.py --text=<원하는 텍스트>
+```
+<b>Example:</b>
+```
+python personal_info_masker.py --text="제 이름은 채환희이고, 제 전화번호는 010-123-5678 입니다."
+```
+The program output looks like the image below.<br /><br />
+<img src="./img/console_text_sample.png"><br />
+### 📝 File
+If you want to mask the text in one single file run <b>personal_info_masker.py</b> script and use --file parameter to set file's path.<br />
+❗<b>Before run the script you have to activate the virtual environment.</b>
+```
+python personal_info_masker.py --text=<원하는 파일 경로> --output_folder=<원하는 폴더 경로>
+```
+By using --output_folder parameter the program will create the desired folder and save the masked file. File name's format will be <b>'datetime'_output.txt</b>. If you don't indicate output folder the masked text will be shown in the console.<br />
+<b>Example 1 (Output in Console):</b>
+```
+python personal_info_masker.py --file="console_test\console_test1.txt"
+```
+<img src="./img/single_file_test1.png"><br />
+<b>Example 2 (Output in File):</b>
+<img src="./img/single_file_test2.png"><br />
+```
+python personal_info_masker.py --file="console_test\console_test1.txt" --output_folder="output_sample"
+```
+### 📁 Folder
+If you want to mask text from many files, run <b>personal_info_masker.py</b> and use --folder parameter to set the folder which contains the files you want to mask. If you define --output_folder parameter, program will create desired folder. In other case the program will create a folder name will be actual data and time (datetime).<br />
+❗<b>Before run the script you have to activate the virtual environment.</b>
+```
+python personal_info_masker.py --file="console_test" --output_folder="output_samples"
+```
+The program output will look like the image below.
+<img src="./img/folder_sample.png"><br />
